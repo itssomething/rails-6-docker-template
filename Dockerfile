@@ -7,6 +7,7 @@ RUN npm install -g yarn
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
 COPY Gemfile.lock /myapp/Gemfile.lock
+RUN yarn install --check-files
 RUN bundle install
 COPY . /myapp
 
